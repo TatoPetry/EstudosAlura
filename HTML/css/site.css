@@ -1,0 +1,144 @@
+body {
+  background-color: #f2fffc;
+  line-height: 1.5;
+  font-size: 120%;
+  font-family: "Crimson Text", "Times New Roman", serif;
+}
+main{
+  float: left;
+  width: 85%;
+  padding-bottom: 85px;
+  
+}
+.bloco-principal {
+  width: 90%;
+  margin: auto;
+
+}
+h2 {
+  font-size: 30px;
+}
+main h1,
+h2 {
+  font-family: "Open Sans Condensed", sans-serif;
+  clear:both;
+}
+.titulo-principal {
+  font-size: 60px;
+  padding: 25px;
+  background: #851944;
+  color: #fff;
+  text-align: center;
+  border-bottom: 10px solid black;
+  text-transform: uppercase;
+}
+aside h1 {
+  margin: 25px;
+  font-size: 30px;
+}
+h2 {
+  text-align: center;
+}
+p {
+  margin: 20px 0;
+  text-align: justify;
+  font-family: "Crimson Text", serif;
+}
+.bloco-citacoes {
+  margin: 20px 40px;
+  background-color: #d9e5e3;
+  padding: 20px;
+  border: 10px solid #c2ccca;
+  width: 250px;
+  box-sizing: border-box;
+}
+.fiat{
+  float: right;
+}
+.petrobras{
+  float: left;
+}
+cite{
+  float: right;
+  font-style: italic;
+}
+.avatarjoao{
+  float: right;
+  position:absolute;
+  top: 0;
+  right: 0;
+}
+.navegacao-site, .avatarjoao{
+  border: 10px solid black;
+  box-sizing: border-box;
+} 
+.navegacao-site {
+  text-align: center;
+  background-color: #3c1d3d;
+  color: #f2fffc;
+  padding: 20px;
+  text-transform: lowercase;
+  float: right;
+  clear: right;
+  width: 15%;
+  position: relative;
+  top:310px;
+}
+.navegacao-site h1{
+  text-transform: none;
+}
+.icones-redes-sociais li{
+  display: inline-block;
+ }
+ .icones-redes-sociais a{
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  font-size: 0px;
+
+ }
+.github{
+  background-image: url(../img/github.png);
+}
+.twitter{
+  background-image: url(../img/twitter.png);
+  }
+.linkedin{
+  background-image: url(../img/linkedin.png);
+}
+
+ul {
+  font-family: "Open Sans Condensed", sans-serif;
+}
+ul li a {
+  color: inherit;
+  text-decoration: none;
+}
+.rodape {
+  background: black;
+  color: #f2fffc;
+  clear: both;
+  position:fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 12px;
+}
+strong {
+  font-weight: bold;
+}
+em {
+  font-style: italic;
+}
+article{
+  padding-bottom: 30px;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 20px;
+}
+.leia-mais{
+  padding: 8px;
+  margin: 16px;
+  display: block;
+  font-size: 24px;
+  text-align: center;
+  background-color: #E6E7E8;
+}
