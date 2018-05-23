@@ -24,3 +24,27 @@
     border: 4px solid lightcoral;
 
 }
+
+.placar{
+    display: none;
+}
+
+body{
+    overflow: scroll;
+}
+
+#erro{
+    color: red;
+    display: none;
+}
+#spinner{
+    display: none;
+}
+
+#frase-id{
+    width: 40px;
+}
+
+#botao-sync{
+    float: right;
+}

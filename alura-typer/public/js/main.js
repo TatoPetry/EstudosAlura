@@ -2,11 +2,15 @@ var tempoInicial = $("#tempo-digitacao").text();
 var campo = $(".campo-digitacao");
 
 $(function(){
-     atualizarTamanhoFrase();
-     inicializarContadores();
-     contagemTempo();
-     inicializaMarcadores();
-     $("#botao-reiniciar").click(reiniciaJogo);
+    atualizaPlacar();
+    fraseAleatoria();    
+    atualizarTamanhoFrase();
+    inicializarContadores();
+    contagemTempo();
+    inicializaMarcadores();
+    $("#botao-reiniciar").click(reiniciaJogo);
+    $("#botao-placar").click(mostraPlacar);
+    $("#botao-frase").click(fraseAleatoria);
 });
 
 //Método atualizar tamanho da frase
@@ -36,8 +40,9 @@ function inicializarContadores(){
 //Método de contagem de tempo
 function contagemTempo(){
 
-    var tempoRestante = $("#tempo-digitacao").text();
+    
     campo.one("focus", function(){
+        var tempoRestante = tempoInicial;
        var cronometroID = setInterval(function(){
            tempoRestante--;
            $("#tempo-digitacao").text(tempoRestante);
@@ -69,8 +74,9 @@ function reiniciaJogo(){
 
 //Método que coloca marcadores de acordo com desempenho do jogador
 function inicializaMarcadores(){
-    var frase = $(".frase").text();
+    
     campo.on("input", function(){
+        var frase = $(".frase").text();
         var digitado = campo.val();
         var comparavel = frase.substr(0 , digitado.length);
         if(comparavel == digitado){
@@ -84,39 +90,8 @@ function inicializaMarcadores(){
     });
 
 }
-
-//Método para inserir placar
-function inserePlacar(){
-    var corpoTabela = $(".placar").find("tbody");
-    var numPalavras = $("#contador-palavras").text();
-    var usuario = "Tato";
-
-    var linha = novaLinha(usuario, numPalavras);
-    corpoTabela.prepend(linha);
-    linha.find(".botao-remover").click(removeLinha);
-}
-//Método cria nova linha da tabela
-function novaLinha(usuario, palavras){
-    var linha = $("<tr>");
-    var colunaUsuario = $("<td>").text(usuario);
-    var colunaPalavras = $("<td>").text(palavras);
-    var colunaRemover = $("<td>");
-
-    var link = $("<a>").attr("href", "#").addClass("botao-remover");
-    var icone = $("<i>").addClass("small").addClass("material-icons").text("delete");
-
-    link.append(icone);
-    colunaRemover.append(link);
-
-    linha.append(colunaUsuario);
-    linha.append(colunaPalavras);
-    linha.append(colunaRemover);
-         
-    return linha;
-}
-
-//Método Remover linha
-function removeLinha(event){
-    event.preventDefault();
-    $(this).parent().parent().remove();
+//Método atualiza tempo de cada frase
+function atualizaTempoInicial(tempo) {
+    tempoInicial = tempo;
+    $("#tempo-digitacao").text(tempo);
 }
