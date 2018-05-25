@@ -1,0 +1,46 @@
+.palestrantes{
+    padding-top: 16px;
+    text-align: center;
+    background:	#F17E51;
+    width: 100%;
+}
+.palestrantes .palestrantes-titulo{
+    color: white;
+    font-size: 2em;
+    margin-bottom: 16px;
+
+}
+.palestrantes .palestrantes-subtitulo{
+    color:white;
+    font-size: 1.5em;
+    margin-bottom: 16px;
+
+}
+.palestrantes-card{
+    width: 100%;
+    vertical-align: top;
+   
+}
+.palestrante{
+    vertical-align: top;
+    display: inline-block;
+    background: white;
+    border-radius: 10px;
+    width:250px;
+    margin: 18px;
+    word-wrap: break-word;
+}
+.palestrante .palestrante-imagem{
+    border-radius: 140px;
+    margin: 15px;
+    
+}
+.palestrante .palestrante-bio{
+    font-weight: bold;
+   
+    margin: 20px 16px 0;
+    
+}
+.palestrante .palestrante-frase{
+    margin: 20px 16px 20px;
+}
